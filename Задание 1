@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	int *pi, i = 5;
+	float *pf, f = 2.1f;
+	char *ch, c="___---- - ____";
+	double *db, d = 12848439;
+
+	printf("%lu\n", sizeof(pi));
+	printf("%lu\n", sizeof(pf));
+	printf("%lu\n", sizeof(ch));
+	printf("%lu\n", sizeof(*db));
+
+	puts("размер данных:");
+	printf("Размер int=%lu\n", sizeof(i));
+	printf("Размер float=%lu\n", sizeof(f));
+	printf("Размер char=%c\n", sizeof(c));
+	printf("Размер double=%lu\n", sizeof(d));
+
+
+
+}
