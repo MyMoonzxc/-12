@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<locale.h>
+
+int main()
+{
+    setlocale(LC_CTYPE, "RUS");
+    int* pa, x = 5;
+    pa = &x;
+
+    char* pc, c = 5;
+    pc = &c;
+
+    double* db, y = 5.0;  
+    db = &y;              
+
+    printf("По адресу %p хранится *pa=%d\n", pa, *pa);
+    pa++;
+    printf("По адресу %p хранится *pa=%d\n", pa, *pa);
+    pa--;
+    printf("По адресу %p хранится *pa=%d\n", pa, *pa);
+    puts("-----------------------------------------------");
+    printf("По адресу %p хранится *pc=%d\n", pc, *pc);
+    pc++;
+    printf("По адресу %p хранится *pc=%d\n", pc, *pc);
+    pc--;
+    printf("По адресу %p хранится *pc=%d\n", pc, *pc);
+    puts("-----------------------------------------------");
+    printf("По адресу %p хранится *db=%g\n", db, *db);
+    db++;
+    printf("По адресу %p хранится *db=%g\n", db, *db);
+    db--;
+    printf("По адресу %p хранится *db=%g\n", db, *db);
+
+    system("pause");
+}
